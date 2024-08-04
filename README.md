@@ -125,6 +125,15 @@ Search took: 856.386557ms
 
 Final prediction: Voilà by André Rieu , score: 5390686.00
 ```
+
+By default uses mongodb as storage, if you want to use sqlite set ENV variable STORAGE_TYPE
+
+```
+export STORAGE_TYPE=sqlite && go run *.go download https://open.spotify.com/track/4pqwGuGu34g8KtfN8LDGZm?si=b3180b3d61084018  
+
+```
+
+
 ## Resources  :card_file_box:
 - [How does Shazam work - Coding Geek](https://drive.google.com/file/d/1ahyCTXBAZiuni6RTzHzLoOwwfTRFaU-C/view) (main resource)
 - [Song recognition using audio fingerprinting](https://hajim.rochester.edu/ece/sites/zduan/teaching/ece472/projects/2019/AudioFingerprinting.pdf)

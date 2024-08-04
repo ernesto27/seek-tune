@@ -309,7 +309,7 @@ func ProcessAndSaveSong(songFilePath, songTitle, songArtist, ytID string) error 
 		return fmt.Errorf("error to storing fingerpring: %v", err)
 	}
 
-	fmt.Println("Fingerprints saved in MongoDB successfully")
+	fmt.Println("Fingerprints saved in " + db.GetStorageName() + " successfully")
 	return nil
 }
 

@@ -201,13 +201,13 @@ func erase(songsDir string) {
 		logger.ErrorContext(ctx, msg, slog.Any("error", err))
 	}
 
-	err = dbClient.DeleteCollection("fingerprints")
+	err = dbClient.DeleteStorage("fingerprints")
 	if err != nil {
 		msg := fmt.Sprintf("Error deleting collection: %v\n", err)
 		logger.ErrorContext(ctx, msg, slog.Any("error", err))
 	}
 
-	err = dbClient.DeleteCollection("songs")
+	err = dbClient.DeleteStorage("songs")
 	if err != nil {
 		msg := fmt.Sprintf("Error deleting collection: %v\n", err)
 		logger.ErrorContext(ctx, msg, slog.Any("error", err))
